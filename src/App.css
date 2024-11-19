@@ -1,0 +1,118 @@
+/* General styling */
+.love-window {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  background-color: #fef3f5;
+  padding: 50px;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.heart-container {
+  margin: 20px auto;
+}
+
+.heart {
+  width: 100px;
+  height: 90px;
+  background: red;
+  position: relative;
+  transform: rotate(-45deg);
+  margin: 0 auto;
+}
+
+.heart:before,
+.heart:after {
+  content: '';
+  width: 100px;
+  height: 90px;
+  background: red;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.heart:before {
+  top: -50px;
+  left: 0;
+}
+
+.heart:after {
+  left: 50px;
+  top: 0;
+}
+
+.title {
+  font-size: 32px;
+  color: #e91e63;
+}
+
+.subtitle {
+  font-size: 20px;
+  color: #ff4081;
+  margin-bottom: 20px;
+}
+
+.love-button {
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: #ff4081;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.love-button:hover {
+  background-color: #e91e63;
+}
+
+.message {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #ff80ab;
+}
+
+/* Falling hearts animation */
+.falling-heart {
+  position: absolute;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #ff4081;
+  transform: rotate(45deg);
+  animation: fall 5s linear infinite;
+  opacity: 0.8;
+}
+
+.falling-heart:before,
+.falling-heart:after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-color: #ff4081;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.falling-heart:before {
+  top: -10px;
+  left: 0;
+}
+
+.falling-heart:after {
+  left: 10px;
+  top: 0;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(45deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(100vh) rotate(90deg);
+    opacity: 0;
+  }
+}
