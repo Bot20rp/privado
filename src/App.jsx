@@ -38,7 +38,7 @@ function App() {
       </button>
       {showMessage && (
         <div className="message">
-          <p>💌 ¡Te amo! Eres mi razón para sonreír cada día. 💞</p>
+          <p>💌 ¡Te Quiero! Eres mi razón para sonreír cada día. 💞</p>
         </div>
       )}
     </div>
